@@ -22,7 +22,7 @@ function showCharacter($cell) {
     }
 }
 
-/*function isEmpty($game, $row, $col){
+function isEmpty($game, $row, $col){
     if ($game[$row][$col] == " "){
         return true;
     } else {
@@ -30,7 +30,7 @@ function showCharacter($cell) {
     }
 }
 
-function hasAnyEmptyCell($game) {
+/*function hasAnyEmptyCell($game) {
     for($i = 0; $i <= 3; $i++){
         for($j = 0; $j <= 3; $j++){
             if($game[$i][$j] == " "){
