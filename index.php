@@ -16,30 +16,24 @@ function showCharacter($cell) {
     if ($cell == 1){
         return "X";
     } elseif ($cell == 2){
-        return "0";
+        return "O";
     } else {
         return " ";
     }
 }
 
-function isEmpty($game, $row, $col){
-    if ($game[$row][$col] == " "){
-        return true;
-    } else {
-        return false;
-    }
+function isEmpty($grid, $x, $y){
+    return $grid[$x][$y] == null;
 }
 
-/*function hasAnyEmptyCell($game) {
+function hasAnyEmptyCell($game) {
     for($i = 0; $i <= 3; $i++){
         for($j = 0; $j <= 3; $j++){
-            if($game[$i][$j] == " "){
-                return true;
-            } else {
-                return false;
-            }
+            if ($game[$i][$j] == null)
+            return true;
         }
     }
+    return false;
 }
 
 function changePlayer($player){
@@ -50,14 +44,6 @@ function changePlayer($player){
         $player = 1;
         return $player;
     }
-}*/
+}
 
 play($game);
-
-
-
-/*function showCharacter($cell): string
-{
-    //return string.
-}
-*/
