@@ -5,9 +5,9 @@ require "functions.php";
 $player = 1;
 
 // Un tableau de 3x3 par defaut avec des valeurs de cellules a null.
-$game = [];//todo instanciate me.
-for($i = 0; $i <= 3; $i++){
-    for($j = 0; $j <= 3; $j++){
+$game = [];
+for($i = 0; $i < 3; $i++){
+    for($j = 0; $j < 3; $j++){
         $game[$i][$j] = null;
     }
 }
@@ -29,8 +29,9 @@ function isEmpty($grid, $x, $y){
 function hasAnyEmptyCell($game) {
     for($i = 0; $i <= 3; $i++){
         for($j = 0; $j <= 3; $j++){
-            if ($game[$i][$j] == null)
-            return true;
+            if ($game[$i][$j] == null) {
+                return true;
+            }
         }
     }
     return false;
